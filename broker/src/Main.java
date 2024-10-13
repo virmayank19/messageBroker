@@ -1,6 +1,7 @@
 import api.Publisher;
 import api.Queue;
 import api.SimpleSubscriber;
+import entity.Message;
 import topic.Topic;
 
 public class Main {
@@ -18,8 +19,8 @@ public class Main {
     queue.subscribe(subscriber, t2);
     queue.subscribe(subscriber2, t1);
 
-    pub1.publish(t1, "Msg1");
-    pub1.publish(t1, "Msg2");
-    pub1.publish(t2, "Msg3");
+    pub1.publish(t1, new Message("Msg1"));
+    pub1.publish(t1, new Message("Msg2"));
+    pub1.publish(t2, new Message("Msg3"));
   }
 }

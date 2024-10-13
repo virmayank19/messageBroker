@@ -1,5 +1,7 @@
 package api;
 
+import entity.Message;
+
 public class SimpleSubscriber implements ISubscriber {
 
   private final String id;
@@ -14,7 +16,7 @@ public class SimpleSubscriber implements ISubscriber {
   }
 
   @Override
-  public void consume(String message) {
+  public void consume(Message message) {
     System.out.println("Message received for Subscriber: " + this.id + ", message:" + message);
   }
 }
