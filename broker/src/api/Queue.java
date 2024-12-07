@@ -21,7 +21,7 @@ public class Queue {
   }
 
   public Topic createTopic(String topicName) {
-    final Topic topic = new Topic(topicName, UUID.randomUUID().toString(), messageDeliveryPool);
+    final Topic topic = new Topic(UUID.randomUUID().toString(), topicName, messageDeliveryPool);
     System.out.println("Created topic: " + topic.getTopicName());
     return topic;
   }

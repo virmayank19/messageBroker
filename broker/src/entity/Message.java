@@ -11,4 +11,8 @@ public class Message {
   public String getMessage() {
     return message;
   }
+
+  public String toString() {
+    return "Message: '" + this.message;
+  }
 }
